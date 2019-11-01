@@ -1,7 +1,8 @@
 
 package monopoli;
 
-public class tanah extends petak {
+public class Tanah extends Petak {
+    
     private double harga_sewa;
     
     public void setHarga_sewa(double harga_sewa){

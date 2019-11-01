@@ -1,6 +1,6 @@
 
 package monopoli;
 
-public class asset {
+public class Asset {
     
 }

@@ -1,7 +1,8 @@
 
 package monopoli;
 
-public class komplek extends petak {
+public class Komplek extends Petak {
+    
     private String nama_komplek;
     
     public void setNama_komplek(String nama_komplek){

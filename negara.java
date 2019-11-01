@@ -1,9 +1,9 @@
 
 package monopoli;
 
-public class negara extends petak {
-    rumah rmh = new rumah();
-    tanah tnh = new tanah();
-    hotel htl = new hotel();
-    komplek kmplk = new komplek();
+public class Negara extends Petak {
+    Rumah rmh = new Rumah();
+    Tanah tnh = new Tanah();
+    Hotel htl = new Hotel();
+    Komplek kmplk = new Komplek();
 }

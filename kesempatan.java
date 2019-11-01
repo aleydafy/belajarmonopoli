@@ -1,6 +1,6 @@
 
 package monopoli;
 
-public class kesempatan extends petak {
+public class Kesempatan extends Petak {
     
 }

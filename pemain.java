@@ -1,11 +1,13 @@
 
 package monopoli;
 import java.util.Scanner;
-public class pemain extends petak{
+
+public class Pemain extends Petak {
+
     Scanner in = new Scanner(System.in);
-    dadu ddu = new dadu();
-    uang uang = new uang();
-    papan ppn = new papan();
+    Dadu ddu = new Dadu();
+    Uang uang = new Uang();
+    Papan ppn = new Papan();
     private String warna;
     private int posisi;
     private int posisiawal;

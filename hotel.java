@@ -1,7 +1,8 @@
 
 package monopoli;
 
-public class hotel extends petak {
+public class Hotel extends Petak {
+    
     private double harga_sewa;
     private double harga_htl;
     

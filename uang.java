@@ -1,7 +1,8 @@
 
 package monopoli;
 
-public class uang {
+public class Uang {
+    
     private double uang;
     
     public void setUang(double uang){

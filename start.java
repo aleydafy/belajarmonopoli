@@ -1,6 +1,6 @@
 
 package monopoli;
 
-public class start extends petak {
+public class Start extends Petak {
     
 }

@@ -4,15 +4,16 @@ import java.util.Scanner;
 public class Monopoli {
 
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        dadu ddu = new dadu();
-        petak ptk = new petak();
         
-        start st = new start();
+        Scanner in = new Scanner(System.in);
+        Dadu ddu = new Dadu();
+        Petak ptk = new Petak();
+        
+        Start st = new Start();
         st.setPosisi(0);
         
-        negara indo = new negara();
-        indo.setNama_petak("Indonesia");
+        Negara indo = new Negara();
+        indo.setNama("Indonesia");
         indo.setPosisi(1);
         indo.setHarga(6000);
         indo.kmplk.setNama_komplek("A");
@@ -25,12 +26,12 @@ public class Monopoli {
         indo.rmh.setHarga_rmh(5000);
         indo.htl.setHarga_htl(25000);
         
-        dana_umum du = new dana_umum();
-        du.setNama_petak("Dana Umum");
+        DanaUmum du = new DanaUmum();
+        du.setNama("Dana Umum");
         du.setPosisi(2);
         
-        negara malay = new negara();
-        malay.setNama_petak("Malaysia");
+        Negara malay = new Negara();
+        malay.setNama("Malaysia");
         malay.setPosisi(3);
         malay.setHarga(6000);
         malay.kmplk.setNama_komplek("A");
@@ -42,13 +43,13 @@ public class Monopoli {
         malay.rmh.setHarga_rmh(5000);
         malay.htl.setHarga_htl(25000);
         
-        pajak_jalan pj = new pajak_jalan();
-        pj.setNama_petak("Pajak Jalan");
+        PajakJalan pj = new PajakJalan();
+        pj.setNama("Pajak Jalan");
         pj.setPosisi(4);
         pj.setHargapajak(20000);
         
-        transportasi ca = new transportasi();
-        ca.setNama_petak("Changi Airport");
+        Transportasi ca = new Transportasi();
+        ca.setNama("Changi Airport");
         ca.setPosisi(5);
         ca.setHarga(20000);
         ca.setHarga_sewa1(2500);
@@ -56,8 +57,8 @@ public class Monopoli {
         ca.setHarga_sewa3(10000);
         ca.setHarga_sewa4(20000);
         
-        negara sg = new negara();
-        sg.setNama_petak("Singapore");
+        Negara sg = new Negara();
+        sg.setNama("Singapore");
         sg.setPosisi(6);
         sg.setHarga(10000);
         sg.kmplk.setNama_komplek("B");
@@ -70,12 +71,12 @@ public class Monopoli {
         sg.rmh.setHarga_rmh(5000);
         sg.htl.setHarga_htl(25000);
         
-        kesempatan ks = new kesempatan();
-        ks.setNama_petak("Kesempatan");
+        Kesempatan ks = new Kesempatan();
+        ks.setNama("Kesempatan");
         ks.setPosisi(7);
         
-        negara hk = new negara();
-        hk.setNama_petak("Hong Kong");
+        Negara hk = new Negara();
+        hk.setNama("Hong Kong");
         hk.setPosisi(8);
         hk.setHarga(10000);
         hk.kmplk.setNama_komplek("B");
@@ -88,8 +89,8 @@ public class Monopoli {
         hk.rmh.setHarga_rmh(5000);
         hk.htl.setHarga_htl(25000);
         
-        negara tw = new negara();
-        tw.setNama_petak("Taiwan");
+        Negara tw = new Negara();
+        tw.setNama("Taiwan");
         tw.setPosisi(9);
         tw.setHarga(12000);
         tw.kmplk.setNama_komplek("B");
@@ -102,8 +103,8 @@ public class Monopoli {
         tw.rmh.setHarga_rmh(5000);
         tw.htl.setHarga_htl(25000);
         
-        negara pp = new negara();
-        pp.setNama_petak("Philipina");
+        Negara pp = new Negara();
+        pp.setNama("Philipina");
         pp.setPosisi(10);
         pp.setHarga(14000);
         pp.kmplk.setNama_komplek("C");
@@ -116,8 +117,8 @@ public class Monopoli {
         pp.rmh.setHarga_rmh(10000);
         pp.htl.setHarga_htl(50000);
         
-        negara tl = new negara();
-        tl.setNama_petak("Thailand");
+        Negara tl = new Negara();
+        tl.setNama("Thailand");
         tl.setPosisi(12);
         tl.setHarga(42000);
         tl.kmplk.setNama_komplek("C");
@@ -130,8 +131,8 @@ public class Monopoli {
         tl.rmh.setHarga_rmh(10000);
         tl.htl.setHarga_htl(50000);
         
-        negara vn = new negara();
-        vn.setNama_petak("Vietnam");
+        Negara vn = new Negara();
+        vn.setNama("Vietnam");
         vn.setPosisi(13);
         vn.setHarga(16000);
         vn.kmplk.setNama_komplek("C");
@@ -144,8 +145,8 @@ public class Monopoli {
         vn.rmh.setHarga_rmh(10000);
         vn.htl.setHarga_htl(50000);
         
-        transportasi terminaltokyo = new transportasi();
-        terminaltokyo.setNama_petak("Terminal Bus Tokyo");
+        Transportasi terminaltokyo = new Transportasi();
+        terminaltokyo.setNama("Terminal Bus Tokyo");
         terminaltokyo.setPosisi(14);
         terminaltokyo.setHarga(20000);
         terminaltokyo.setHarga_sewa1(2500);
@@ -153,40 +154,40 @@ public class Monopoli {
         terminaltokyo.setHarga_sewa3(10000);
         terminaltokyo.setHarga_sewa4(20000);
         
-        papan ppn = new papan();
-        ppn.tambah_petak(st);
-        ppn.tambah_petak(indo);
-        ppn.tambah_petak(du);
-        ppn.tambah_petak(malay);
-        ppn.tambah_petak(pj);
-        ppn.tambah_petak(ca);
-        ppn.tambah_petak(sg);
-        ppn.tambah_petak(ks);
-        ppn.tambah_petak(hk);
-        ppn.tambah_petak(tw);
-        ppn.tambah_petak(pp);
-        ppn.tambah_petak(tl);
-        ppn.tambah_petak(vn);
+        Papan ppn = new Papan();
+        ppn.tambahPetak(st);
+        ppn.tambahPetak(indo);
+        ppn.tambahPetak(du);
+        ppn.tambahPetak(malay);
+        ppn.tambahPetak(pj);
+        ppn.tambahPetak(ca);
+        ppn.tambahPetak(sg);
+        ppn.tambahPetak(ks);
+        ppn.tambahPetak(hk);
+        ppn.tambahPetak(tw);
+        ppn.tambahPetak(pp);
+        ppn.tambahPetak(tl);
+        ppn.tambahPetak(vn);
         
-        pemain p1 = new pemain();
+        Pemain p1 = new Pemain();
         System.out.println("Masukan Warna Player 1 : ");
         String warnap1 = in.nextLine();
         p1.setWarna(warnap1);
         p1.uang.setUang(150000);
         
-        pemain p2 = new pemain();
+        Pemain p2 = new Pemain();
         System.out.println("Masukan Warna Player 2 = ");
         String warnap2 = in.nextLine();
         p2.setWarna(warnap2);
         p2.uang.setUang(150000);
         
-        pemain p3 = new pemain();
+        Pemain p3 = new Pemain();
         System.out.println("Masukan Warna Player 3 = ");
         String warnap3 = in.nextLine();
         p3.setWarna(warnap3);
         p3.uang.setUang(150000);
         
-        pemain p4 = new pemain();
+        Pemain p4 = new Pemain();
         System.out.println("Masukan Warna Player 4 = ");
         String warnap4 = in.nextLine();
         p4.setWarna(warnap4);
@@ -196,27 +197,27 @@ public class Monopoli {
         System.out.println("Player 1 " + p1.getWarna());
         System.out.println("Uang Anda : " + p1.uang.getUang());
         p1.lempardadu();
-        System.out.println("Anda berada di " + ppn.daftar_petak.get(p1.getPosisi()).getNama_petak());
-        System.out.println("Harga = " + ppn.daftar_petak.get(p1.getPosisi()).getHarga());
+        System.out.println("Anda berada di " + ppn.daftarPetak.get(p1.getPosisi()).getNama());
+        System.out.println("Harga = " + ppn.daftarPetak.get(p1.getPosisi()).getHarga());
         p1.option();
         
         System.out.println("---------------------------");
         System.out.println("Player " + p2.getWarna());
         System.out.println("Uang Anda : " + p2.uang.getUang());
         p2.lempardadu();
-        System.out.println("Anda berada di " + ppn.daftar_petak.get(p2.getPosisi()).getNama_petak());
+        System.out.println("Anda berada di " + ppn.daftarPetak.get(p2.getPosisi()).getNama());
         p2.option();
         
         System.out.println("---------------------------");
         System.out.println("Warna Player 3 : " + p3.getWarna() + ", dan Uang Anda : " + p3.uang.getUang());
         p3.lempardadu();
-        System.out.println("Anda berada di " + ppn.daftar_petak.get(p3.getPosisi()).getNama_petak());
+        System.out.println("Anda berada di " + ppn.daftarPetak.get(p3.getPosisi()).getNama());
         p3.option();
         
         System.out.println("---------------------------");
         System.out.println("Warna Player 4 : " + p4.getWarna() + ", dan Uang Anda : " + p4.uang.getUang());
         p4.lempardadu();
-        System.out.println("Anda berada di " + ppn.daftar_petak.get(p4.getPosisi()).getNama_petak());
+        System.out.println("Anda berada di " + ppn.daftarPetak.get(p4.getPosisi()).getNama());
         p4.option(); 
     }
     

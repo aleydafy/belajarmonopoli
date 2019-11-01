@@ -1,17 +1,18 @@
 
 package monopoli;
 
-public class petak {
-    private String nama_petak;
+public class Petak {
+
+    private String nama;
     private int posisi;
     private double harga;
     
-    public void setNama_petak(String nama_petak){
-        this.nama_petak = nama_petak;
+    public void setNama(String nama){
+        this.nama = nama;
     }
     
-    public String getNama_petak(){
-        return nama_petak;
+    public String getNama(){
+        return nama;
     }
     
     public void setPosisi(int posisi){

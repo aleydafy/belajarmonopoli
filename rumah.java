@@ -1,7 +1,8 @@
 
 package monopoli;
 
-public class rumah extends petak {
+public class Rumah extends Petak {
+    
     private double harga_sewa1;
     private double harga_sewa2;
     private double harga_sewa3;

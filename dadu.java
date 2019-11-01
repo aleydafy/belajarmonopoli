@@ -1,7 +1,9 @@
 
 package monopoli;
 import java.util.Random;
-public class dadu {
+
+public class Dadu {
+    
     private int dadu1;
     private int dadu2;
     private int hasil;

@@ -1,14 +1,16 @@
 
 package monopoli;
 import java.util.ArrayList;
-public class papan {
-    ArrayList<petak> daftar_petak;
+
+public class Papan {
+
+    ArrayList<Petak> daftarPetak;
     
-    public papan(){
-        daftar_petak = new ArrayList<petak>();
+    public Papan(){
+        daftarPetak = new ArrayList<Petak>();
     }
     
-    public void tambah_petak(petak ptk){
-        daftar_petak.add(ptk);
+    public void tambahPetak(Petak ptk){
+        daftarPetak.add(ptk);
     }
 }
