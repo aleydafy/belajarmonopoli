@@ -2,59 +2,60 @@
 package com.game.monopoly;
 import java.util.Scanner;
 
-public class Pemain {
+public class Pemain implements Pemainable{
 
-    private Scanner in;
-    private Daduable ddu;
     private Uang uang;
     private String warna;
     private int posisi;
     private int posisiawal;
     private int posisiakhir;
 
-    public Pemain(String warna, Uang uang, Daduable dadu) {
-        this.ddu = dadu;
+    public Pemain(Uang uang){
         this.uang = uang;
-        this.warna = warna;
-        this.in = new Scanner(System.in);
-    }
-    
-    public String getWarna(){
-        return warna;
-    }
-    
-    public String getUang(){
-        return String.valueOf(uang.getNominal());
-    }
-    
-    public int getPosisi(){
-        return posisi;
     }
 
-    public void lempardadu(){
-        ddu.kocok();
+    public Pemain(String warna, Uang uang ) {
+        this.uang = uang;
+        this.warna = warna;
+    }
+
+    public void lempardadu(Daduable dadu){
+        dadu.kocok();
         posisiawal = posisiakhir;
-        posisiakhir = ddu.getDadu() + posisiawal;
+        posisiakhir = dadu.getDadu() + posisiawal;
         
         if(posisiakhir > 40){
             posisiakhir -= 40;
         }
         posisi = posisiakhir;
+    }
 
-        Display.showHasilDadu(ddu.getDadu1(), ddu.getDadu2());
-        Display.showPemainBergerak(warna, ddu.getDadu(), posisiawal, posisi);
+    public String getWarna(){
+        return warna;
     }
-    
-    public void option(){
-      
-        Display.showMenu();
-        
-        int lagi = in.nextInt();
-        
-        switch(lagi){
-            case 1 : 
-                System.out.println("Sisa uang anda = ");
-               
-        }
+
+    public String getUang(){
+        return String.valueOf(uang.getNominal());
     }
+
+    public int getPosisi(){
+        return posisi;
+    }
+
+    public int getPosisiAwal(){
+        return posisiawal;
+    }
+
+    public void setWarna(String warna) {
+        this.warna = warna;
+    }
+}
+
+interface Pemainable {
+    public void lempardadu(Daduable dadu);
+    public void setWarna(String warna);
+    public String getWarna();
+    public String getUang();
+    public int getPosisi();
+    public int getPosisiAwal();
 }

@@ -36,51 +36,34 @@ public class Main {
         ppn.tambah_petak(tl);
         ppn.tambah_petak(vn);
 
-        Scanner in = new Scanner(System.in);
         Daduable dadu = new Dadu();
 
-        System.out.println("Masukan Warna Player 1 : ");
-        String warnap1 = in.nextLine();
-        Pemain p1 = new Pemain(warnap1, new Uang(1500000), dadu);
+        Pemainable p1 = new Pemain(new Uang(15000000));
+        Pemainable p2 = new Pemain(new Uang(15000000));
+        Pemainable p3 = new Pemain(new Uang(15000000));
+        Pemainable p4 = new Pemain(new Uang(15000000));
 
-        System.out.println("Masukan Warna Player 2 = ");
-        String warnap2 = in.nextLine();
-        Pemain p2 = new Pemain(warnap2, new Uang(150000), dadu);
+        Presenter.tampilkanInputWarnaPadaPemain("Player 1", p1);
+        Presenter.tampilkanInputWarnaPadaPemain("Player 2", p2);
+        Presenter.tampilkanInputWarnaPadaPemain("Player 3", p3);
+        Presenter.tampilkanInputWarnaPadaPemain("Player 4", p4);
 
-        System.out.println("Masukan Warna Player 3 = ");
-        String warnap3 = in.nextLine();
-        Pemain p3 = new Pemain(warnap3, new Uang(150000), dadu);
+        p1.lempardadu(dadu);
+        Presenter.tampilkanHasilLemparDadu(p1, dadu, ppn);
+        Presenter.showMenu();
 
-        System.out.println("Masukan Warna Player 4 = ");
-        String warnap4 = in.nextLine();
-        Pemain p4 = new Pemain(warnap4, new Uang(150000), dadu);
+        p2.lempardadu(dadu);
+        Presenter.tampilkanHasilLemparDadu(p2, dadu, ppn);
+        Presenter.showMenu();
 
-        System.out.println("---------------------------");
-        System.out.println("Player 1 " + p1.getWarna());
-        System.out.println("Uang Anda : " + p1.getUang());
-        p1.lempardadu();
-        System.out.println("Anda berada di " + ppn.daftarPetak.get(p1.getPosisi()).getNama());
-        System.out.println("Harga = " + ppn.daftarPetak.get(p1.getPosisi()).getHarga());
-        p1.option();
+        p3.lempardadu(dadu);
+        Presenter.tampilkanHasilLemparDadu(p3, dadu, ppn);
+        Presenter.showMenu();
 
-        System.out.println("---------------------------");
-        System.out.println("Player " + p2.getWarna());
-        System.out.println("Uang Anda : " + p2.getUang());
-        p2.lempardadu();
-        System.out.println("Anda berada di " + ppn.daftarPetak.get(p2.getPosisi()).getNama());
-        p2.option();
+        p4.lempardadu(dadu);
+        Presenter.tampilkanHasilLemparDadu(p4, dadu, ppn);
+        Presenter.showMenu();
 
-        System.out.println("---------------------------");
-        System.out.println("Warna Player 3 : " + p3.getWarna() + ", dan Uang Anda : " + p3.getUang());
-        p3.lempardadu();
-        System.out.println("Anda berada di " + ppn.daftarPetak.get(p3.getPosisi()).getNama());
-        p3.option();
-
-        System.out.println("---------------------------");
-        System.out.println("Warna Player 4 : " + p4.getWarna() + ", dan Uang Anda : " + p4.getUang());
-        p4.lempardadu();
-        System.out.println("Anda berada di " + ppn.daftarPetak.get(p4.getPosisi()).getNama());
-        p4.option();
     }
 
     private static Negara instansiasiNegaraIndo() {
